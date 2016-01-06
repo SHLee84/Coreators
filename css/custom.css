@@ -1,0 +1,138 @@
+@font-face {
+  font-family: HelveticaHOne;
+  src: url("../fonts/coreators/helvetica/HelveticaNeueLTStd-Hv.otf") format("opentype");
+}
+
+@font-face {
+  font-family: HelveticaHTwo;
+  src: url("../fonts/coreators/helvetica/HelveticaNeueLTStd-Bd.otf") format("opentype");
+}
+@font-face {
+  font-family: HelveticaBody;
+  src: url("../fonts/coreators/helvetica/HelveticaNeueLTStd-Lt.otf") format("opentype");
+}
+
+/*MENU*/
+
+body {
+  font-family: 'HelveticaBody', Verdana, Sans-Serif;
+}
+
+h1 {
+  font-family: 'HelveticaHOne', Verdana, Sans-Serif;
+}
+
+h2 {
+  font-family: 'HelveticaHTwo', Verdana, Sans-Serif;
+}
+
+.side_menu {
+  list-style: none;
+  line-height: 60px;
+  margin: auto;
+  padding-left: 0;
+  width: 18em;
+}
+
+.side_menu a {
+  color: #ddd;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding-left: 3em;
+  width: 100%;
+}
+
+.side_menu a:hover {
+  margin-left: 1em;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.side_menu li {
+  box-shadow: 3px 0 rgba(100,100,100,.2) inset;
+  margin-bottom: 5px;
+  padding-left: .5em;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.side_menu li:hover { box-shadow: 15em 0 rgba(100,100,100,.2)inset; }
+
+.side_menu li:nth-child(2) a { background-position: 0 -60px; }
+
+.side_menu li:nth-child(3) a { background-position: 0 -120px; }
+
+.side_menu li:nth-child(4) a { background-position: 0 -180px; }
+
+.side_menu li:nth-child(5) a { background-position: 0 -240px; }
+
+.side_menu li:last-child a { background-position: 0 -300px; }
+
+/*FIN MENU*/
+/*Posicion Responsive Menu*/
+
+nav {
+  background: rgba(0,0,0,.9);
+  padding-right: 0em;
+  position: fixed;
+  left: -18em;
+  top: 0;
+  padding-top: 10em;
+  box-sizing: border-box;
+  z-index: 20;
+  height: 100%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+nav.active { left: 0; }
+
+#mobile-nav {
+  left: 3.5em;
+  cursor: pointer;
+  position: fixed;
+  top: 3.5em;
+  z-index: 30;
+}
+
+#logo {
+  right: 3.5em;
+  position: absolute;
+  top: 3.5em;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    box-shadow: inset 0 6px 6px -6px rgba(0,0,0,.5);
+}
+
+.red .form-control {
+  border-color: rgb(239,95,94);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.yellow .form-control {
+  border-color: rgb(239,167,91);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.cyon .form-control {
+  border-color: rgb(57,192,205);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+#mail_message {
+  display: none;
+  position: fixed;
+  right: 3.5em;
+  bottom: 3.5em;
+  z-index: 30;
+}
