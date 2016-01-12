@@ -28,6 +28,7 @@
 		include_once('content/includes/divider.php');
 		//include_once('content/main/people.php');
 		include_once('content/main/contact.php');
+		include_once('content/includes/modal.php');
 		 ?>
 		 <?php include_once('content/includes/footer.php'); ?>
 		<script src="js/jquery-2.1.4.min.js"></script>

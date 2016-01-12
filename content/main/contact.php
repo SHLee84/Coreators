@@ -21,11 +21,11 @@
 						</div>
 					</div>
 					<div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
-						<div class="form-group form-group-lg cyon">
+						<div class="form-group form-group-lg">
 							<textarea class="form-control" id="content" rows="4" placeholder="Message" required></textarea>
 						</div>
 					</div>
-					<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+					<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
 						<div class="form-group form-group-lg">
 							<button id="submit" type="button" class="form-control">Send</button>
 						</div>

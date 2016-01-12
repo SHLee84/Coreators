@@ -1,3 +1,9 @@
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
 @font-face {
   font-family: HelveticaHOne;
   src: url("../fonts/coreators/helvetica/HelveticaNeueLTStd-Hv.otf") format("opentype");
@@ -135,4 +141,43 @@ hr {
   right: 3.5em;
   bottom: 3.5em;
   z-index: 30;
+}
+
+.form-group button {
+  background-color: #000000;
+  color: white;
+  text-align: right;
+}
+
+.form-group input[type="text"] {
+  border-width: 5px;
+  border-color: #000000;
+}
+
+.form-group input[type="password"] {
+  border-width: 5px;
+  border-color: #000000;
+}
+
+.form-group textarea {
+  border-width: 5px;
+  border-color: #000000;
+}
+
+.login {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 100px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 400px;
+  }
 }
