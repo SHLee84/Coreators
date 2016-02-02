@@ -146,7 +146,7 @@ hr {
 .form-group button {
   background-color: #000000;
   color: white;
-  text-align: right;
+  text-align: center;
 }
 
 .form-group input[type="text"] {
@@ -166,6 +166,10 @@ hr {
 
 .login {
   cursor: pointer;
+}
+
+.target_p {
+  height: 200px;
 }
 
 @media (min-width: 768px) {
