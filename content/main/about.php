@@ -4,10 +4,6 @@
 			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 				<br /><br /><br /><br />
 				<h1>About</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 				<h2>Our Vision</h2>
 				<p>Coreators is a Toronto-based nonprofit organization established in 2015, with a vision to discover and nurture what can be called a uniquely Korean-Canadian culture.</p>
 				<p>Coreators plan to fulfill such vision by building a community of creative individuals where they can find an environment to proactively nurture their creativity while garnering a supportive audience through both individual and collective production and exhibition of their creative works.</p>

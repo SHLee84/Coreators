@@ -4,6 +4,7 @@
 	?>
 	<nav>
 		<ul class="side_menu">
+			<li><a href="coreator-of-the-month/">blog</a></li>
 			<li><a class="scroll" href="#about">About</a></li>
 			<!-- <li><a class="scroll" href="#people">People</a></li> -->
 			<li><a class="scroll" href="#contact">Contact</a></li>

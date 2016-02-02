@@ -16,6 +16,7 @@ $('#mobile-nav').click(function(event) {
 });
 
 $(document).ready(function(){
+
 	$("#submit").click(function(e){
 		e.preventDefault();
 		var name = $("#name").val();
@@ -35,5 +36,11 @@ $(document).ready(function(){
 				$("#mail_message").removeClass("alert-success").addClass("alert-error").html('<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;&nbsp;Your message was not delivered').fadeIn("fast").delay(5000).fadeOut("fast");
     		}
 		});
+	});
+
+	$(".test_submit").submit(function(e) {
+		e.preventDefault();
+		alert($(this).)
+		$(this).closest(".container").find(".target_p").append($(".content").text());
 	});
 });
