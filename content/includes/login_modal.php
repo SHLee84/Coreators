@@ -5,20 +5,20 @@
 			<div class="modal-body">
 				<div class="container-fluid">
 					<div class="row">
-						<form id="loginform" class="form-horizontal" role="form">
+						<form id="loginform" class="form-horizontal" role="form" method="post" action="authenticate.php">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group form-group-lg">
-									<input type="text" id="email" class="form-control" placeholder="Your Email" required />
+									<input type="text" name="email" id="email" class="form-control" placeholder="Your Email" required />
 									<br />
 								</div>
 								<div class="form-group form-group-lg">
-									<input type="password" id="password" class="form-control" placeholder="Password" required />
+									<input type="password" name="password" id="password" class="form-control" placeholder="Password" required />
 									<br />
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group form-group-lg">
-									<button id="submit" type="button" class="form-control">Log In</button>
+									<button type="submit" class="form-control">Log In</button>
 								</div>
 							</div>
 						</form>

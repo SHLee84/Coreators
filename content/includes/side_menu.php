@@ -10,14 +10,14 @@
 			<li><a class="scroll" href="#contact">Contact</a></li>
 		</ul>
 		<hr />
-	<?php if (isset($_SESSION["username"]) && $_SESSION["username"] != "") { ?>
+	<?php if (isset($_SESSION["uname"]) && $_SESSION["uname"] != "") { ?>
 		<ul class="side_menu">
-			<li><a><small>Logged in as Coreators</small></a></li>
+			<li><a><small>Logged in as <?php echo $_SESSION["uname"]; ?></small></a></li>
+			<li><a href="logout.php">Logout</a></li>
 		</ul>
 		<?php } else { ?>
 		<ul class="side_menu login">
 			<li><a class="scroll" data-toggle="modal" data-target="#loginModal">Log In</a></li>
 		</ul>
 		<?php } ?>
-	<?php session_destroy(); ?>
 	</nav>

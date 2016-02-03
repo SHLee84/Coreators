@@ -1,4 +1,9 @@
-<?php include_once('includes/db_access.php');
+<?php 
+if(!isset($_COOKIE["PHPSESSID"]))
+{
+	session_start();
+}
+include_once('includes/db_access.php');
 include_once('content/includes/functions.php');
  ?>
 <!DOCTYPE html>
@@ -25,20 +30,25 @@ include_once('content/includes/functions.php');
 		<?php include_once('content/includes/side_menu.php'); ?>
 		<?php include_once('content/includes/top_menu.php'); ?>
 		<?php 
-		connect();
 
+		connect();
 		$res = get_main_post();
 
+		if (isset($_SESSION["uname"])) {
+		}
+		
 		if ($res == NULL) {
-			echo "No post found.";
-		} else {
+			include_once("content/main/no_post.php");
+		} else {             
+			while ($post =         )
+
 			//include_once('content/main/about.php');
 			//include_once('content/includes/divider.php');
 			//include_once('content/main/people.php');
 			//include_once('content/main/contact.php');		
 		}
 		include_once('content/main/add_main.php');
-		include_once('content/includes/modal.php');
+		include_once('content/includes/login_modal.php');
 		include_once('content/includes/footer.php'); ?>
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
