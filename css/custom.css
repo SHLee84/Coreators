@@ -168,8 +168,12 @@ hr {
   cursor: pointer;
 }
 
-.target_p {
-  height: 200px;
+.add_main_post {
+  display: none;
+}
+
+div.active {
+  display: block;
 }
 
 @media (min-width: 768px) {

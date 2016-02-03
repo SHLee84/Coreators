@@ -32,7 +32,6 @@ include_once('content/includes/functions.php');
 
 		connect();
 		$res = get_main_post();
-		
 		if (isset($_SESSION["uname"])) {
 			include("content/includes/divider.php");	
 		}

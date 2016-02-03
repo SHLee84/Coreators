@@ -1,3 +1,7 @@
+$('html').click(function() {
+	$('nav').removeClass('active');
+});
+
 $(".scroll").click(function(event){
 		event.preventDefault();
 		//calculate destination place
@@ -12,6 +16,7 @@ $(".scroll").click(function(event){
 	});
 
 $('#mobile-nav').click(function(event) {
+	event.stopPropagation();
 	$('nav').toggleClass('active');
 });
 
@@ -37,4 +42,18 @@ $(document).ready(function(){
     		}
 		});
 	});
+
+	$(".btn-create").click(function() {
+		$(this).closest("center").fadeOut("fast", function() {
+			$(this).closest("div").find(".add_main_post").toggleClass("active");
+		});
+	});
+
+	$(".btn-cancel").click(function() {
+		$(this).closest("form").trigger("reset");
+		$(this).closest(".add_main_post").toggleClass("active");
+		$(this).closest(".add_main_post").fadeOut("fast", function() {
+			$(this).closest(".divider").find("center").fadeIn("fast");
+		});
+	})
 });

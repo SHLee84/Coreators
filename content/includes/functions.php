@@ -10,7 +10,7 @@
 
 	function get_main_post() {
 		global $db_con;
-		$sql = "SELECT anchor, post_order, title, content FROM Post AS p JOIN PostContent AS pc ON (p.post_id = pc.post_id) WHERE post_type=1";
+		$sql = "SELECT anchor, post_order, title, content, post_order, status FROM Post AS p JOIN PostContent AS pc ON (p.post_id = pc.post_id) WHERE post_type=1 ORDER BY post_order";
 		$result = $db_con->query($sql);
 		$db_con->close();
 		return $result;
