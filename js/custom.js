@@ -37,10 +37,4 @@ $(document).ready(function(){
     		}
 		});
 	});
-
-	$(".test_submit").submit(function(e) {
-		e.preventDefault();
-		alert($(this).)
-		$(this).closest(".container").find(".target_p").append($(".content").text());
-	});
 });
