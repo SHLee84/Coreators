@@ -10,7 +10,15 @@
 
 	function get_main_post() {
 		global $db_con;
-		$sql = "SELECT anchor, post_order, title, content FROM Post JOIN PostContent ON (post_id) WHERE post_type=1";
+		$sql = "SELECT anchor, post_order, title, content FROM Post AS p JOIN PostContent AS pc ON (p.post_id = pc.post_id) WHERE post_type=1";
+		$result = $db_con->query($sql);
+		$db_con->close();
+		return $result;
+	}
+
+	function get_main_menu() {
+		global $db_con;
+		$sql = "SELECT anchor, post_order FROM Post WHERE post_type=1";
 		$result = $db_con->query($sql);
 		$db_con->close();
 		return $result;
@@ -40,6 +48,7 @@
 			if ($encrypted_pw == md5($pword)) {
 				$success = true;
 				// sets the attempt to true, and stores session values accordingly
+				session_start();
 				setcookie("PHPSESSID", session_id(), time() + 600);
 				$_SESSION["uname"] = $uname;
 			}

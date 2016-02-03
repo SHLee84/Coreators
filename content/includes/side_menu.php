@@ -1,13 +1,16 @@
-	<?php 
-	session_start();
-	//$_SESSION["username"] = "Coreators";
-	?>
 	<nav>
 		<ul class="side_menu">
-			<li><a href="coreator-of-the-month/">blog</a></li>
-			<li><a class="scroll" href="#about">About</a></li>
-			<!-- <li><a class="scroll" href="#people">People</a></li> -->
-			<li><a class="scroll" href="#contact">Contact</a></li>
+			<li><a href="coreator-of-the-month/">Blog</a></li>
+			<?php
+				connect();
+				$menu_res = get_main_menu();
+				if ($menu_res->num_rows > 0) {
+				// output data of each row
+					while($menu_item = $menu_res->fetch_assoc()) { ?>
+						<li><a class="scroll" href="#<?php echo $menu_item["anchor"]; ?>"><?php echo $menu_item["anchor"]; ?></a></li>
+			<?php 	}
+				}
+			?>
 		</ul>
 		<hr />
 	<?php if (isset($_SESSION["uname"]) && $_SESSION["uname"] != "") { ?>
