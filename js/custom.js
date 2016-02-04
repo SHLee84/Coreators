@@ -34,12 +34,12 @@ $(document).ready(function(){
 			cache: false,
 			success: function(res){
 				$("#mail_message").removeClass("alert-error").addClass("alert-success").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;Your message has been delivered successfully').fadeIn("fast", function() {
-                    $("#contactform").trigger("reset");
-                }).delay(5000).fadeOut("fast");
+					$("#contactform").trigger("reset");
+				}).delay(5000).fadeOut("fast");
 			},
 			error: function(res){
 				$("#mail_message").removeClass("alert-success").addClass("alert-error").html('<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;&nbsp;Your message was not delivered').fadeIn("fast").delay(5000).fadeOut("fast");
-    		}
+			}
 		});
 	});
 
@@ -55,5 +55,35 @@ $(document).ready(function(){
 		$(this).closest(".add_main_post").fadeOut("fast", function() {
 			$(this).closest(".divider").find("center").fadeIn("fast");
 		});
-	})
+	});
+
+	$(".btn-submit").click(function() {
+		var $title = $(this).closest("form").find("#title").val();
+		var $anchor = $(this).closest("form").find("#anchor").val();
+		var $content = $(this).closest("form").find("#content").val();
+		var $order = $(this).closest("form").find("#order").val();
+
+		var $data = {
+			'title': $title,
+			'anchor': $anchor,
+			'content': $content,
+			'order': $order
+		};
+
+		$.ajax({
+			type: "POST",
+			url: "ajax/save_post.php",
+			data: $data,
+			success: function(res){
+				alert(res);
+			},
+			error: function() { 
+				alert("uh oh something happened");
+			}
+		});
+		//$(this).closest(".add_main_post").toggleClass("active");
+		//$(this).closest(".add_main_post").fadeOut("fast", function() {
+		//	$(this).closest(".divider").find("center").fadeIn("fast");
+		//});
+	});
 });

@@ -5,7 +5,7 @@
 			<div class="modal-body">
 				<div class="container-fluid">
 					<div class="row">
-						<form id="loginform" class="form-horizontal" role="form" method="post" action="authenticate.php">
+						<form id="loginform" class="form-horizontal" role="form" method="post" action="<?php echo BASE_ADDRESS . AUTHENTICATE; ?>">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group form-group-lg">
 									<input type="text" name="email" id="email" class="form-control" placeholder="Your Email" required />

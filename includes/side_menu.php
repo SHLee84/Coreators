@@ -1,6 +1,6 @@
 	<nav>
 		<ul class="side_menu">
-			<li><a href="coreator-of-the-month/">Blog</a></li>
+			<li><a href="<?php echo BASE_ADDRESS . BLOG_F; ?>">Blog</a></li>
 			<?php
 				connect();
 				$menu_res = get_main_menu();
@@ -16,7 +16,7 @@
 	<?php if (isset($_SESSION["uname"]) && $_SESSION["uname"] != "") { ?>
 		<ul class="side_menu">
 			<li><a><small>Logged in as <?php echo $_SESSION["uname"]; ?></small></a></li>
-			<li><a href="logout.php">Logout</a></li>
+			<li><a href="<?php echo BASE_ADDRESS . LOGOUT; ?>">Logout</a></li>
 		</ul>
 		<?php } else { ?>
 		<ul class="side_menu login">

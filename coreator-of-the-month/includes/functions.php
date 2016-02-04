@@ -6,11 +6,15 @@
 		if ($db_con->connect_error) {
 			die("Connection failed: " . $db_con->connect_error);
 		}
+
+		// enables Korean
+		$sql = "set names utf8";
+		$res = $db_con->query($sql);
 	}
 
-	function get_main_post() {
+	function get_blog_post() {
 		global $db_con;
-		$sql = "SELECT anchor, post_order, title, content, post_order, status FROM Post AS p JOIN PostContent AS pc ON (p.post_id = pc.post_id) WHERE post_type=1 ORDER BY post_order";
+		$sql = "SELECT f_name, post_order, title, cover, content, video, post_order, p.status FROM Post AS p JOIN PostContent AS pc ON ( p.post_id = pc.post_id ) JOIN User AS u ON ( p.author_id = u.user_id ) WHERE post_type =2 ORDER BY post_order";
 		$result = $db_con->query($sql);
 		$db_con->close();
 		return $result;
@@ -24,9 +28,13 @@
 		return $result;
 	}
 
-	function insert_post() {
+	function insert_post($title, $author, $anchor, $content, $type, $video = NULL, $status = 0, $order) {
 		global $db_con;
+		$post_sql = sprintf("INSERT INTO Post (post_type, author_id, anchor, post_order, status) VALUES (%d, %d, '%s', %f, %d)", $type, $author, $anchor, $order, $status);
+		$post_content_sql = sprintf("INSERT INTO PostContent (post_id, title, video, content) VALUES (%d, '%s', '%s', '%s')", $post_id, $title, $video, $content);
+		$result = $db_con->query($sql);
 		$db_con->close();
+
 	}
 
 	function login_to_db($uname, $pword) {

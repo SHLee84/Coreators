@@ -1,11 +1,12 @@
 <?php
-	include_once('includes/db_access.php');
-	include_once('content/includes/functions.php');
+	include_once('includes/definition.php');
+	include_once(BASE_ADDRESS . INCLUDES_F . DB);
+	include_once(BASE_ADDRESS . INCLUDES_F . FUNCTIONS);
 
 	if (isset($_POST["email"], $_POST["password"])) {
 		connect();
 		login_to_db($_POST["email"], $_POST["password"]);
 	}
 
-	header('Location: .');
+	header('Location: ' . BASE_ADDRESS);
 ?>

@@ -5,12 +5,7 @@
 }
 
 @font-face {
-  font-family: HelveticaHOne;
-  src: url("../fonts/coreators/helvetica/HelveticaNeueLTStd-Hv.otf") format("opentype");
-}
-
-@font-face {
-  font-family: HelveticaHTwo;
+  font-family: HelveticaBold;
   src: url("../fonts/coreators/helvetica/HelveticaNeueLTStd-Bd.otf") format("opentype");
 }
 @font-face {
@@ -25,11 +20,15 @@ body {
 }
 
 h1 {
-  font-family: 'HelveticaHOne', Verdana, Sans-Serif;
+  font-family: 'HelveticaBold', Verdana, Sans-Serif;
 }
 
 h2 {
-  font-family: 'HelveticaHTwo', Verdana, Sans-Serif;
+  font-family: 'HelveticaBold', Verdana, Sans-Serif;
+}
+
+strong, b {
+  font-family: 'HelveticaBold', Verdana, Sans-Serif;
 }
 
 .side_menu {

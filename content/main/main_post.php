@@ -14,7 +14,7 @@
 							</div>
 						</div>
 					</seciton>
-			<?php 	include("content/includes/divider.php"); ?>
+			<?php 	include(BASE_ADDRESS . INCLUDES_F . MAIN_DIVIDER); ?>
 			<?php } else if($post["status"] == 0 && isset($_SESSION["uname"])) { ?>
 					<seciton id="<?php echo $post["anchor"]; ?>">
 						<div class="container">
@@ -26,7 +26,8 @@
 							</div>
 						</div>
 					</seciton>
-			<?php }
+			<?php 	include(BASE_ADDRESS . INCLUDES_F . MAIN_DIVIDER);
+					}
 				}
 			}
 ?>
