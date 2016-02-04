@@ -5,6 +5,7 @@
 	define('ORG_FULL_NAME', 'Coreators');
 	define('BASE_ADDRESS', './');
 	define('BLOG_NAME', 'Coreator of the Month');
+	define('FB_PAGE', 'https://www.facebook.com/coreators');
 
 	// folders
 	define('INCLUDES_F', 'includes/');
